@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fizz Buzz - JS</title>
+</head>
+
+<body>
+
+<script>
+
+    (function () {
+
+        fizzBuzz();
+
+        function fizzBuzz() {
+
+            for (var i = 1, max = 100; i <= max; ++i) {
+
+                var dividesBy3 = i % 3 === 0;
+                var dividesBy5 = i % 5 === 0;
+
+                var msg = i + ' ';
+
+                if (dividesBy3 && dividesBy5) {
+                    msg += 'fizzbuzz';
+                }
+                else if (dividesBy3) {
+                    msg += 'fizz';
+                }
+                else if (dividesBy5) {
+                    msg += 'buzz';
+                }
+
+                console.log(msg + '\n');
+            }
+        }
+
+    })();
+
+</script>
+
+</body>
+</html>
